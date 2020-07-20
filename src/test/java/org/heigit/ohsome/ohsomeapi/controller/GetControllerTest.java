@@ -219,7 +219,7 @@ public class GetControllerTest {
         server + port + "/elements/count/ratio?bboxes=8.66004,49.41184,8.68481,49.42094&types=way"
             + "&time=2015-01-01/2019-01-01/P1Y&keys=building&types2=node&keys2=addr:housenumber",
         JsonNode.class);
-    assertEquals(0.153933, response.getBody().get("ratioResult").get(0).get("ratio").asDouble(),
+    assertEquals(0.153933, response.getBody().get("result").get(0).get("ratio").asDouble(),
         1e-6);
   }
 
@@ -237,7 +237,7 @@ public class GetControllerTest {
                 response.getBody().get("groupByBoundaryResult").iterator(), Spliterator.ORDERED),
             false)
         .filter(jsonNode -> jsonNode.get("groupByObject").asText().equalsIgnoreCase("boundary1"))
-        .findFirst().get().get("ratioResult").get(0).get("ratio").asDouble(), 1e-6);
+        .findFirst().get().get("result").get(0).get("ratio").asDouble(), 1e-6);
   }
 
   @Test
@@ -402,7 +402,7 @@ public class GetControllerTest {
         server + port + "/elements/length/ratio?bboxes=8.67567,49.40695,8.69434,49.40882"
             + "&types=way&time=2011-12-13&keys=highway&keys2=railway",
         JsonNode.class);
-    assertEquals(0.135225, response.getBody().get("ratioResult").get(0).get("ratio").asDouble(),
+    assertEquals(0.135225, response.getBody().get("result").get(0).get("ratio").asDouble(),
         1e-6);
   }
 
@@ -419,7 +419,7 @@ public class GetControllerTest {
                 response.getBody().get("groupByBoundaryResult").iterator(), Spliterator.ORDERED),
             false)
         .filter(jsonNode -> jsonNode.get("groupByObject").asText().equalsIgnoreCase("boundary1"))
-        .findFirst().get().get("ratioResult").get(0).get("ratio").asDouble(), 1e-6);
+        .findFirst().get().get("result").get(0).get("ratio").asDouble(), 1e-6);
   }
 
   @Test
@@ -988,7 +988,7 @@ public class GetControllerTest {
         server + port + "/elements/area/ratio?bboxes=8.68081,49.39821,8.69528,49.40687&time="
             + "2018-01-01&filter=building=* and type:way&filter2=building=* and type:relation",
         JsonNode.class);
-    assertEquals(0.060083, response.getBody().get("ratioResult").get(0).get("ratio").asDouble(),
+    assertEquals(0.060083, response.getBody().get("result").get(0).get("ratio").asDouble(),
         1e-6);
   }
 
@@ -1006,7 +1006,7 @@ public class GetControllerTest {
                 response.getBody().get("groupByBoundaryResult").iterator(), Spliterator.ORDERED),
             false)
         .filter(jsonNode -> jsonNode.get("groupByObject").asText().equalsIgnoreCase("b2"))
-        .findFirst().get().get("ratioResult").get(0).get("ratio").asDouble(), 1e-6);
+        .findFirst().get().get("result").get(0).get("ratio").asDouble(), 1e-6);
   }
 
   @Test

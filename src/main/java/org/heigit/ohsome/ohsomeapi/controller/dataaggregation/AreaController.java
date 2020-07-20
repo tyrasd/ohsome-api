@@ -12,7 +12,6 @@ import org.heigit.ohsome.ohsomeapi.controller.ParameterDescriptions;
 import org.heigit.ohsome.ohsomeapi.executor.ElementsRequestExecutor;
 import org.heigit.ohsome.ohsomeapi.executor.RequestResource;
 import org.heigit.ohsome.ohsomeapi.output.dataaggregationresponse.DefaultAggregationResponse;
-import org.heigit.ohsome.ohsomeapi.output.dataaggregationresponse.RatioResponse;
 import org.heigit.ohsome.ohsomeapi.output.dataaggregationresponse.Response;
 import org.heigit.ohsome.ohsomeapi.output.dataaggregationresponse.groupbyresponse.GroupByResponse;
 import org.heigit.ohsome.ohsomeapi.output.dataaggregationresponse.groupbyresponse.RatioGroupByBoundaryResponse;
@@ -272,7 +271,7 @@ public class AreaController {
   @ApiOperation(
       value = "Ratio of the area of OSM elements satisfying types2, keys2 and values2 (or filter2)"
           + "within items selected by types, keys and values (or filter)",
-      nickname = "areaRatio", response = RatioResponse.class)
+      nickname = "areaRatio", response = DefaultAggregationResponse.class)
   @ApiImplicitParams({
       @ApiImplicitParam(name = "types2", value = ParameterDescriptions.TYPES,
           defaultValue = "relation", paramType = "query", dataType = "string", required = false),

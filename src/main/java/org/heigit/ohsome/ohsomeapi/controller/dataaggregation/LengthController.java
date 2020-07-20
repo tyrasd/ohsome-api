@@ -11,7 +11,6 @@ import org.heigit.ohsome.ohsomeapi.controller.ParameterDescriptions;
 import org.heigit.ohsome.ohsomeapi.executor.ElementsRequestExecutor;
 import org.heigit.ohsome.ohsomeapi.executor.RequestResource;
 import org.heigit.ohsome.ohsomeapi.output.dataaggregationresponse.DefaultAggregationResponse;
-import org.heigit.ohsome.ohsomeapi.output.dataaggregationresponse.RatioResponse;
 import org.heigit.ohsome.ohsomeapi.output.dataaggregationresponse.Response;
 import org.heigit.ohsome.ohsomeapi.output.dataaggregationresponse.groupbyresponse.GroupByResponse;
 import org.heigit.ohsome.ohsomeapi.output.dataaggregationresponse.groupbyresponse.RatioGroupByBoundaryResponse;
@@ -275,7 +274,7 @@ public class LengthController {
   @ApiOperation(
       value = "Ratio of OSM elements satisfying types2, keys2 and values2 (or filter2) within items "
           + "selected by types, keys and values (or filter)",
-      nickname = "lengthRatio", response = RatioResponse.class)
+      nickname = "lengthRatio", response = DefaultAggregationResponse.class)
   @ApiImplicitParams({
       @ApiImplicitParam(name = "types2", value = ParameterDescriptions.TYPES,
           defaultValue = DefaultSwaggerParameters.TYPE, paramType = "query", dataType = "string",

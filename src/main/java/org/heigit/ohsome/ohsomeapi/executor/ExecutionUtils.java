@@ -73,8 +73,8 @@ import org.heigit.ohsome.ohsomeapi.oshdb.DbConnData;
 import org.heigit.ohsome.ohsomeapi.oshdb.ExtractMetadata;
 import org.heigit.ohsome.ohsomeapi.output.Description;
 import org.heigit.ohsome.ohsomeapi.output.dataaggregationresponse.Attribution;
+import org.heigit.ohsome.ohsomeapi.output.dataaggregationresponse.DefaultAggregationResponse;
 import org.heigit.ohsome.ohsomeapi.output.dataaggregationresponse.Metadata;
-import org.heigit.ohsome.ohsomeapi.output.dataaggregationresponse.RatioResponse;
 import org.heigit.ohsome.ohsomeapi.output.dataaggregationresponse.RatioResult;
 import org.heigit.ohsome.ohsomeapi.output.dataaggregationresponse.Response;
 import org.heigit.ohsome.ohsomeapi.output.dataaggregationresponse.Result;
@@ -756,7 +756,7 @@ public class ExecutionUtils {
           ElementsRequestExecutor.TEXT, Application.API_VERSION, metadata));
       return null;
     }
-    return new RatioResponse(
+    return DefaultAggregationResponse.of(
         new Attribution(ExtractMetadata.attributionUrl, ExtractMetadata.attributionShort),
         Application.API_VERSION, metadata, resultSet);
   }

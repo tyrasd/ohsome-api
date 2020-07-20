@@ -393,7 +393,7 @@ public class PostControllerTest {
     map.add("keys2", "building");
     ResponseEntity<JsonNode> response = restTemplate
         .postForEntity(server + port + "/elements/perimeter/ratio", map, JsonNode.class);
-    assertEquals(0.01558, response.getBody().get("ratioResult").get(0).get("ratio").asDouble(),
+    assertEquals(0.01558, response.getBody().get("result").get(0).get("ratio").asDouble(),
         1e-6);
   }
 
@@ -418,7 +418,7 @@ public class PostControllerTest {
                 response.getBody().get("groupByBoundaryResult").iterator(), Spliterator.ORDERED),
             false)
         .filter(jsonNode -> jsonNode.get("groupByObject").asText().equalsIgnoreCase("Neuenheim"))
-        .findFirst().get().get("ratioResult").get(0).get("ratio").asDouble(), 1e-6);
+        .findFirst().get().get("result").get(0).get("ratio").asDouble(), 1e-6);
   }
 
   @Test
@@ -657,7 +657,7 @@ public class PostControllerTest {
     map.add("keys2", "building");
     ResponseEntity<JsonNode> response =
         restTemplate.postForEntity(server + port + "/elements/area/ratio", map, JsonNode.class);
-    assertEquals(0.060513, response.getBody().get("ratioResult").get(0).get("ratio").asDouble(),
+    assertEquals(0.060513, response.getBody().get("result").get(0).get("ratio").asDouble(),
         1e-6);
   }
 
@@ -674,7 +674,7 @@ public class PostControllerTest {
     map.add("keys2", "building");
     ResponseEntity<JsonNode> response = restTemplate.postForEntity(
         server + port + "/elements/area/ratio/groupBy/boundary", map, JsonNode.class);
-    assertEquals(0.060513, response.getBody().get("groupByBoundaryResult").get(1).get("ratioResult")
+    assertEquals(0.060513, response.getBody().get("groupByBoundaryResult").get(1).get("result")
         .get(0).get("ratio").asDouble(), 1e-6);
   }
 
@@ -791,7 +791,7 @@ public class PostControllerTest {
     map.add("values2", "Schwimmerbecken");
     ResponseEntity<JsonNode> response =
         restTemplate.postForEntity(server + port + "/elements/area/ratio", map, JsonNode.class);
-    assertEquals(0.558477, response.getBody().get("ratioResult").get(0).get("ratio").asDouble(),
+    assertEquals(0.558477, response.getBody().get("result").get(0).get("ratio").asDouble(),
         1e-6);
   }
 
