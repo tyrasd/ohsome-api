@@ -3,12 +3,13 @@ package org.heigit.ohsome.ohsomeapi.utils;
 import org.geojson.Feature;
 import org.geojson.GeoJsonObject;
 import org.heigit.ohsome.ohsomeapi.output.Result;
-import org.heigit.ohsome.ohsomeapi.output.contributions.UsersResult;
+import org.heigit.ohsome.ohsomeapi.output.dataaggregationresponse.users.ContributionsResult;
 import org.heigit.ohsome.ohsomeapi.output.elements.ElementsResult;
 import org.heigit.ohsome.ohsomeapi.output.groupby.GroupByObject;
 import org.heigit.ohsome.ohsomeapi.output.groupby.GroupByResult;
 import org.heigit.ohsome.ohsomeapi.output.ratio.RatioGroupByResult;
 import org.heigit.ohsome.ohsomeapi.output.ratio.RatioResult;
+
 
 /**
  * Creates the GeoJson features used in the GeoJson response for the /groupBy/boundary endpoints.
@@ -64,7 +65,11 @@ public class GroupByBoundaryGeoJsonGenerator {
    *         instance of
    *         {@link org.heigit.ohsome.ohsomeapi.output.elements.ElementsResult
    *         ElementsResult}, or
+<<<<<<< HEAD
    *         {@link org.heigit.ohsome.ohsomeapi.output.contributions.UsersResult
+=======
+   *         {@link org.heigit.ohsome.ohsomeapi.output.dataaggregationresponse.users.ContributionsResult
+>>>>>>> further implementation of /contributions/count[/density]
    *         UserResult}
    */
   private static Feature[] generateGroupByResultGeoJson(GroupByObject[] results,
@@ -83,8 +88,8 @@ public class GroupByBoundaryGeoJsonGenerator {
         ElementsResult result = (ElementsResult) res;
         String tstamp = result.getTimestamp();
         feature = fillGeojsonFeature(results, groupByResultCount, tstamp);
-      } else if (res instanceof UsersResult) {
-        UsersResult result = (UsersResult) res;
+      } else if (res instanceof ContributionsResult) {
+        ContributionsResult result = (ContributionsResult) res;
         String tstampFrom = result.getFromTimestamp();
         String tstampTo = result.getToTimestamp();
         feature = fillGeojsonFeature(results, groupByResultCount, tstampFrom, tstampTo);
