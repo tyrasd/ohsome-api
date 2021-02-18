@@ -3,7 +3,7 @@ package org.heigit.ohsome.ohsomeapi.utils;
 import org.geojson.Feature;
 import org.geojson.GeoJsonObject;
 import org.heigit.ohsome.ohsomeapi.output.Result;
-import org.heigit.ohsome.ohsomeapi.output.dataaggregationresponse.users.ContributionsResult;
+import org.heigit.ohsome.ohsomeapi.output.contributions.ContributionsResult;
 import org.heigit.ohsome.ohsomeapi.output.elements.ElementsResult;
 import org.heigit.ohsome.ohsomeapi.output.groupby.GroupByObject;
 import org.heigit.ohsome.ohsomeapi.output.groupby.GroupByResult;
@@ -68,7 +68,7 @@ public class GroupByBoundaryGeoJsonGenerator {
 <<<<<<< HEAD
    *         {@link org.heigit.ohsome.ohsomeapi.output.contributions.UsersResult
 =======
-   *         {@link org.heigit.ohsome.ohsomeapi.output.dataaggregationresponse.users.ContributionsResult
+   *         {@link org.heigit.ohsome.ohsomeapi.output.contributions.ContributionsResult
 >>>>>>> further implementation of /contributions/count[/density]
    *         UserResult}
    */
