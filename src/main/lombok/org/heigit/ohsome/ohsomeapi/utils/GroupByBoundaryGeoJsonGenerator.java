@@ -65,11 +65,7 @@ public class GroupByBoundaryGeoJsonGenerator {
    *         instance of
    *         {@link org.heigit.ohsome.ohsomeapi.output.elements.ElementsResult
    *         ElementsResult}, or
-<<<<<<< HEAD
-   *         {@link org.heigit.ohsome.ohsomeapi.output.contributions.UsersResult
-=======
    *         {@link org.heigit.ohsome.ohsomeapi.output.contributions.ContributionsResult
->>>>>>> further implementation of /contributions/count[/density]
    *         UserResult}
    */
   private static Feature[] generateGroupByResultGeoJson(GroupByObject[] results,

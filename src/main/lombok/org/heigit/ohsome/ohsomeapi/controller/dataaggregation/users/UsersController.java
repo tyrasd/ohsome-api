@@ -28,11 +28,8 @@ public class UsersController {
    * 
    * @param servletRequest <code>HttpServletRequest</code> of the incoming request
    * @param servletResponse <code>HttpServletResponse</code> of the outgoing response
-<<<<<<< HEAD:src/main/lombok/org/heigit/ohsome/ohsomeapi/controller/dataaggregation/users/UsersController.java
-   * @return {@link org.heigit.ohsome.ohsomeapi.output Response}
-=======
-   * @return {@link org.heigit.ohsome.ohsomeapi.output.dataaggregationresponse.Response Response}
->>>>>>> integrate /users/count into ContributionsExecutor:src/main/lombok/org/heigit/ohsome/ohsomeapi/controller/dataaggregation/UsersController.java
+   * @return {@link org.heigit.ohsome.ohsomeapi.output.DefaultAggregationResponse
+   *         DefaultAggregationResponse}
    * @throws Exception thrown by
    *         {@link org.heigit.ohsome.ohsomeapi.executor.ContributionsExecutor#count(boolean) count}
    */
@@ -138,11 +135,7 @@ public class UsersController {
    * 
    * @param servletRequest <code>HttpServletRequest</code> of the incoming request
    * @param servletResponse <code>HttpServletResponse</code> of the outgoing response
-<<<<<<< HEAD:src/main/lombok/org/heigit/ohsome/ohsomeapi/controller/dataaggregation/users/UsersController.java
-   * @return {@link org.heigit.ohsome.ohsomeapi.output Response}
-=======
-   * @return {@link org.heigit.ohsome.ohsomeapi.output.dataaggregationresponse.Response Response}
->>>>>>> integrate /users/count into ContributionsExecutor:src/main/lombok/org/heigit/ohsome/ohsomeapi/controller/dataaggregation/UsersController.java
+   * @return {@link org.heigit.ohsome.ohsomeapi.output.Response Response}
    * @throws Exception thrown by
    *         {@link org.heigit.ohsome.ohsomeapi.executor.ContributionsExecutor#count(boolean) count}
    */
