@@ -2,6 +2,7 @@ package org.heigit.ohsome.ohsomeapi.executor;
 
 import java.io.Serializable;
 import java.util.Collections;
+import java.util.EnumSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -175,9 +176,9 @@ public class DataExtractionTransformer implements Serializable {
     boolean addToOutput = addEntityToOutput(isContainingSimpleFeatureTypes, utils,
         simpleFeatureTypes, geom);
     if (addToOutput) {
-      return Collections.singletonList(
-          exeUtils.createOSMFeature(entity, geom.get(), properties, keysInt, includeTags,
-              includeOSMMetadata, isContributionsEndpoint, elementsGeometry, null));
+      return Collections.singletonList(exeUtils.createOSMFeature(entity, geom.get(), properties,
+          keysInt, includeTags, includeOSMMetadata, isContributionsEndpoint, elementsGeometry,
+          EnumSet.noneOf(ContributionType.class)));
     } else {
       return Collections.emptyList();
     }
