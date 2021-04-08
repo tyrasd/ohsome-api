@@ -37,6 +37,10 @@
     <sonar.java.libraries>target/classes</sonar.java.libraries>
     <sonar.sources>src/main/lombok</sonar.sources>
     <sonar.tests>src/test/java</sonar.tests>
+
+    <sonar.projectKey>ohsome-API</sonar.projectKey>
+    <sonar.organization>tyrasd</sonar.organization>
+    <sonar.host.url>https://sonarcloud.io</sonar.host.url>
   </properties>
 
   <dependencies>
