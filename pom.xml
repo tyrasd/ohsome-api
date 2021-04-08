@@ -35,6 +35,8 @@
     <springfox.version>2.9.2</springfox.version>
     
     <sonar.java.libraries>target/classes</sonar.java.libraries>
+    <sonar.sources>src/main/lombok</sonar.sources>
+    <sonar.tests>src/test/java</sonar.tests>
   </properties>
 
   <dependencies>
